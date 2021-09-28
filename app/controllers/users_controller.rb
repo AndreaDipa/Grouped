@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
     def index
-        
         @students = User.non_professors
     end
     def show
@@ -12,7 +11,7 @@ class UsersController < ApplicationController
     end
     def destroy
         user = User.find(params[:id])
-        authorize! :destroy, user, :message => "You are not authorized"
+        authorize! :destroy, user, :message => "You are not authorized"      
         user.destroy
         flash[:notice] = "User removed"
         if user.is_professor?
@@ -31,6 +30,5 @@ class UsersController < ApplicationController
 
 
     end
-    
-    
+
 end

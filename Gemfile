@@ -26,7 +26,8 @@ gem 'devise-bootstrap-views', '~> 1.0'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem 'canard'
-
+gem "rails-erd"
+gem 'railroady'
 gem "octokit", "~> 4.0"
 gem 'mailboxer'
 

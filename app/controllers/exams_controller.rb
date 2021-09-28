@@ -42,7 +42,7 @@ class ExamsController < ApplicationController
         authorize! :destroy, Exam, :message => "You are not authorized"
         user_exams.destroy_all
         exam_projects.destroy_all
-        exam.destroy
+        exam.delete
         redirect_to exams_path
     end
 
